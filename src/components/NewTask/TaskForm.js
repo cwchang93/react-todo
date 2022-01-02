@@ -29,7 +29,7 @@ const TaskForm = (props) => {
         loading={disabled}
         onClick={submitHandler}
       >
-        {disabled ? "傳送" : "新增"}
+        {disabled ? "" : "新增"}
       </Button>
     </form>
   );
