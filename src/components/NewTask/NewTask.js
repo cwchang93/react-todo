@@ -7,7 +7,7 @@ const NewTask = (props) => {
 
   const enterTaskHandler = (taskText) => {
     if (!taskText) {
-      setError("請輸入字串");
+      setError("事項不得空白！");
     } else {
       setError("");
       props.onAddTask(taskText);

@@ -4,7 +4,7 @@ import classes from "./Tasks.module.css";
 import dayjs from "dayjs";
 
 const Tasks = (props) => {
-  let taskList = <h2>沒有代辦事項，快來新增!</h2>;
+  let taskList = <h2>沒有待辦事項，快來新增!</h2>;
 
   if (props.items.length > 0) {
     taskList = (
