@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 
 import classes from "./TaskForm.module.css";
+import { Button } from "antd";
 
 const TaskForm = (props) => {
   const taskInputRef = useRef();
@@ -19,16 +20,17 @@ const TaskForm = (props) => {
     }, 1300);
   };
 
-  useEffect(() => {
-    console.log("change");
-  }, [props.isLoading]);
-
   return (
-    <form className={classes.form} onSubmit={submitHandler}>
+    <form className={classes.form}>
       <input type="text" ref={taskInputRef} />
-      <button disabled={disabled}>
-        {props.isLoading ? "傳送中..." : "新增"}
-      </button>
+      <Button
+        className={"submitBtn"}
+        type="primary"
+        loading={disabled}
+        onClick={submitHandler}
+      >
+        {disabled ? "傳送" : "新增"}
+      </Button>
     </form>
   );
 };

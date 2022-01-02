@@ -22,3 +22,7 @@
     background-color: #cccccc;
     color: #666666;
 }
+
+.submitBtn.hideSpin .ant-btn-loading-icon {
+    display: none;
+}
